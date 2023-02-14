@@ -13,11 +13,10 @@ class HealthChart(MycroftSkill):
 
     @intent_file_handler('chart.health.intent')
     def handle_chart_health(self, message):
-        self.speak_dialog('chart.health')
 
         self.log.info(message)
 
-        self.speak_dialog('health.vox')
+        self.speak_dialog('chart.health')
 
         self.visit_types = ['health concern', 'wellness exam',
                             'vaccination', 'screening mammography']
